@@ -78,4 +78,7 @@ $(document).ready(function() {
   
   //initialize
   refresh();
+
+  // make the searchfield autogrowing
+  $('#searchString').autoGrow();
 });

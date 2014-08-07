@@ -14,9 +14,15 @@
   border-color: #398439;
 }
 
+.searchString {
+  max-width: 1000px;
+  min-width: 100%;
+  transition: width 100ms linear;
+}
+
 /* make autocomplete list scrollable */
 .ui-autocomplete {
-  max-height: 150px;
+  max-height: 400px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -25,5 +31,5 @@
 * we use height instead, but this forces the menu to always be this tall
 */
 * html .ui-autocomplete {
-  heigh: 100px;
+  height: 400px;
 }
