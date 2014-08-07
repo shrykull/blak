@@ -1,0 +1,15 @@
+/* Style addon-success for input group like btn-success */
+.addon-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.addon-success:hover,
+.addon-success:focus,
+.addon-success:active,
+.addon-success.active {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
