@@ -13,3 +13,17 @@
   background-color: #449d44;
   border-color: #398439;
 }
+
+/* make autocomplete list scrollable */
+.ui-autocomplete {
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+ /* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+  heigh: 100px;
+}
