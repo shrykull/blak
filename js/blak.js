@@ -80,5 +80,7 @@ $(document).ready(function() {
   refresh();
 
   // make the searchfield autogrowing
+  // but first set max-width (60% of window width)
+  $('#searchString').css('max-width', 0.6*$(window).width());
   $('#searchString').autoGrow();
 });

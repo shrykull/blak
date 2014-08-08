@@ -1,35 +1,28 @@
-/* Style addon-success for input group like btn-success */
 .addon-success {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
 }
 
-.addon-success:hover,
-.addon-success:focus,
-.addon-success:active,
-.addon-success.active {
-  color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
+.addon-success:hover,.addon-success:focus,.addon-success:active,.addon-success.active {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
 }
 
 .searchString {
-  max-width: 1000px;
-  min-width: 100%;
-  transition: width 100ms linear;
+    /* max-width will be overwritenm via JS */
+    max-width: 1000px;
+    min-width: 100%;
+    transition: width 100ms linear;
 }
 
-/* make autocomplete list scrollable */
 .ui-autocomplete {
-  max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
- /* IE 6 doesn't support max-height
-* we use height instead, but this forces the menu to always be this tall
-*/
 * html .ui-autocomplete {
-  height: 400px;
+    height: 400px;
 }

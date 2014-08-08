@@ -4,7 +4,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/blak.css" type="text/css" />
+    <link rel="stylesheet" href="css/blak.min.css" type="text/css" />
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
     
     <script type="text/javascript" src="js/lib/jquery-2.1.1.min.js"></script>
@@ -18,15 +18,20 @@
       <div class="page-header">
         <h1>BLAK</h1>
       </div>
-      <div class="col-xs-4">
-      <div class="input-group">
-          <input class="form-control searchString" id="searchString" type="text" contenteditable="true" placeholder="Enter IDs" />
-          <div class="btn input-group-addon addon-success" id="btnSearch">Search!</div>
-      </div>
-     </div>
       <p>
-      <button id="fetchStuff" class="btn btn-success btn-sm" type="button" value="Uberraschung">Refresh</button>
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="input-group">
+              <input class="form-control searchString" id="searchString" type="text" placeholder="Enter IDs" />
+              <div class="btn input-group-addon addon-success" id="btnSearch">Search!</div>
+          </div>
+       </div>
+      </div>
+     </p>
+      <p>
+        <button id="fetchStuff" class="btn btn-success btn-sm" type="button" value="Uberraschung">Refresh</button>
       </p>
+      <p>&nbsp;</p>
       <div id="mainview" class="row">
         <div id="ingredients" class="col-md-5">
           diiiv:
