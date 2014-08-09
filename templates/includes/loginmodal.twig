@@ -1,0 +1,46 @@
+<!-- Modal -->
+<link rel="stylesheet" href="css/loginmodal.css" type="text/css" />
+<script type="text/javascript" src="js/loginModal.js"></script>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="wrapper">
+        <div class="form-wrapper">
+          <div class="signin-form">
+            <h2><i class="glyphicon glyphicon-user"></i>Login</h2>
+            <form>
+              <input type="text" class="form-control" name="username" placeholder="Username/E-Mail Address" />
+              <input type="password" class="form-control" name="password" placeholder="Password" />
+              <input type="checkbox" value="remember" name="remember" id="remember" />
+              <label for="remember" class="remember">Remember me</label>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+              <p class="help-block">
+                <a class="pull-right text-muted" href="#" id="forgot-password">
+                  <small>Forgot your password?</small>
+                </a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="form-wrapper" style="display:none;">
+          <div class="forgot-form">
+            <h2><i class="glyphicon glyphicon-envelope"></i>Forgot your password?</h2>
+            <p class="help-block">
+              Please enter you E-Mail adress.
+              <br/>We will send you an E-Mail with instructions to reset your password
+            </p>
+            <form>
+              <input type="text" class="form-control" name="email" placeholder="E-Mail Address" />
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Forgot password</button>
+              <p class="help-block">
+                <a class="pull-right text-muted" href="#" id="login">
+                  <small>Login</small>
+                </a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

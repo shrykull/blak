@@ -1,0 +1,62 @@
+.wrapper {
+  margin: 80px auto 80px auto;
+}
+
+.signin-form {
+    margin: 0 auto;
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+    
+.forgot-form {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+  
+.signin-form h2,
+.signin-form .remember,
+.forgot-form h2 {
+  margin-bottom: 30px;
+}
+
+.signin-form h2 i,
+.forgot-form h2 i{
+    margin-right: 10px;
+}
+  
+.signin-form label {
+  font-weight: normal;
+}
+    
+.signin-form .form-control,
+.forgot-form .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+        
+.signin-form .form-control:focus {
+  z-index: 2;
+}
+        
+.signin-form input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+          
+.signin-form input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.forgot-form input[type="text"] {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,39 @@
+{% set current_page = app.request.get('_route') %}
+
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home">BLAK</a>
+    </div><!-- /.navbar-header -->
+    <div class="navbar-collapse collapse">
+      <!-- left -->
+      <ul class="nav navbar-nav">
+        <li {% if "home"==current_page %}class="active" {% endif %}><a href="home">Home</a>
+        </li>
+        <li {% if "search"==current_page %}class="active" {% endif %}><a href="search">Search</a>
+        </li>
+      </ul>
+      <!-- right -->
+      <ul class="nav navbar-nav navbar-right">
+        <!-- on big screens show a button -->
+        <li class="hidden-xs">
+          <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#loginModal">Login</button>
+        </li><!-- on small screen only a link (button looks crappy) -->
+        <li class="visible-xs" data-toggle="modal" data-target="#myModal">Login</a>
+        </li>
+        <li {% if "register"==current_page %} class="active" {% endif %}><a href="#">Sign up</a>
+        </li>
+      </ul>
+    </div><!-- /.nav-collapse -->
+  </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+{% include 'includes/loginmodal.twig' %}
