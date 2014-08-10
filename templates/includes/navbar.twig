@@ -1,6 +1,6 @@
 {% set current_page = app.request.get('_route') %}
 
-<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ app.request.basepath }}/js/lib/bootstrap.min.js"></script>
 
 <div class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
@@ -11,14 +11,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="home">BLAK</a>
+      <a class="navbar-brand" href="/home">BLAK</a>
     </div><!-- /.navbar-header -->
     <div class="navbar-collapse collapse">
       <!-- left -->
       <ul class="nav navbar-nav">
-        <li {% if "home"==current_page %}class="active" {% endif %}><a href="home">Home</a>
+        <li {% if "home"==current_page %}class="active" {% endif %}><a href="/home">Home</a>
         </li>
-        <li {% if "search"==current_page %}class="active" {% endif %}><a href="search">Search</a>
+        <li {% if "search"==current_page %}class="active" {% endif %}><a href="/search">Search</a>
         </li>
       </ul>
       <!-- right -->
@@ -26,10 +26,11 @@
         <!-- on big screens show a button -->
         <li class="hidden-xs">
           <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#loginModal">Login</button>
-        </li><!-- on small screen only a link (button looks crappy) -->
-        <li class="visible-xs" data-toggle="modal" data-target="#myModal">Login</a>
         </li>
-        <li {% if "register"==current_page %} class="active" {% endif %}><a href="#">Sign up</a>
+        <!-- on small screen only a link (button looks crappy) -->
+        <li class="visible-xs"><a href="/" data-toggle="modal" data-target="#loginModal">Login</a>
+        </li>
+        <li><a href="/register">Sign up</a>
         </li>
       </ul>
     </div><!-- /.nav-collapse -->

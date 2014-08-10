@@ -10,6 +10,10 @@
     border-color: #398439;
 }
 
+.item-preview {
+    height: 64px;
+}
+
 .searchString {
     /* max-width will be overwritenm via JS */
     max-width: 1000px;
