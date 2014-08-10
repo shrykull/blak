@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ app.request.basepath }}/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="{{ app.request.basepath }}/css/register.css" type="text/css" />
+  
+  <script type="text/javascript" src="{{ app.request.basepath }}/js/lib/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ app.request.basepath }}/js/register.js"></script>
+</head>
+
+<body>
+  {% include 'includes/navbar.twig' %}
+
+  <div class="container">
+    {% if verified %}
+    <h2>Congratulations</h2>
+    <p>Your account was verified and you can <a href="#" data-toggle="modal" data-target="#loginModal">login</a> now.</p>
+    {% else %}
+    <h2>Sorry, something went wrong...</h2>
+    <p>Your account was not verified. Please check your verify code.</p>
+    {% endif %}
+  </div><!-- /container -->
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/register.css" type="text/css" />
+  
+  <script type="text/javascript" src="{{ app.request.basepath }}/js/lib/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ app.request.basepath }}/js/register.js"></script>
+</head>
+
+<body>
+  {% include 'includes/navbar.twig' %}
+
+  <div class="container">
+    <form method="post" action="register" class="signup-form" id="signup-form">
+      <h2 class="header"><i class="glyphicon glyphicon-user"></i>Sing up</h2>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="username" placeholder="Username" />
+        <span class="glyphicon glyphicon-ok form-control-feedback" style="display:none;"></span>
+      </div>
+      <input type="text" class="form-control" name="email" placeholder="E-Mail Address" />
+      <input type="password" class="form-control" name="password" placeholder="Password" />
+      <input type="password" class="form-control" name="verify_password" placeholder="Retype password" />
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
+    </form>
+  </div><!-- /container -->
+</body>
+
+</html>
