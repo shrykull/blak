@@ -5,6 +5,20 @@ $(document).ready(function() {
     return passwordIsValid(signupForm) && mailIsValid(signupForm);
   });
   
+  $('input[name=username]', signupForm).focusout(function() {
+    if (!registerUsernameIsValid(signupForm)) {
+      $(this).addClass('has-error');
+      if ($('#usernameError').length === 0) {
+        $('#signup-form').prepend('<div id="usernameError" class="alert alert-danger" style="display:none;">The username has to be at least 3 characters long.</div>');
+      }
+      
+      $('#usernameError').fadeIn('slow');
+    } else {
+      $('#usernameError').fadeOut('slow');
+      $(this).removeClass('has-error');
+    }
+  });
+  
   $('input[name=email]', signupForm).focusout(function() {
     if (!mailIsValid(signupForm)) {
       $(this).addClass('has-error');
@@ -33,6 +47,10 @@ $(document).ready(function() {
     }
   });
 });
+
+function registerUsernameIsValid(signupForm) {
+  return $('input[name=username]', signupForm).val().length > 3;
+}
 
 function passwordIsValid(signupForm) {
   return $('input[name=password]', signupForm).val() !== "" && $('input[name=password]', signupForm).val() === $('input[name=verify_password]', signupForm).val();

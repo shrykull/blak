@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/error.css" type="text/css" />
+  
+  <script type="text/javascript" src="/js/lib/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+  {% include 'includes/navbar.twig' %}
+
+  <div class="container">
+
+  <img src="{{app.request.basepath}}/images/failsnail.jpg" />
+  <div class="alert alert-danger" role="alert">
+    <h1><strong>Please don't feed the fail snail!</strong></h1>
+    <h3>{{ message }}</h3>
+    <p class="info">{{ info }}</p>
+  </div>
+
+  </div>
+  <!-- /container -->
+</body>
+
+</html>

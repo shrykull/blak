@@ -1,6 +1,8 @@
 {% set current_page = app.request.get('_route') %}
 
-<script type="text/javascript" src="{{ app.request.basepath }}/js/lib/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/blak.min.css" type="text/css" />
+  
+<script type="text/javascript" src="/js/lib/bootstrap.min.js"></script>
 
 <div class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
@@ -23,18 +25,19 @@
       </ul>
       <!-- right -->
       <ul class="nav navbar-nav navbar-right">
+      {% if session.username is not defined %}
         <!-- on big screens show a button -->
         <li class="hidden-xs">
           <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#loginModal">Login</button>
         </li>
         <!-- on small screen only a link (button looks crappy) -->
-        <li class="visible-xs"><a href="/" data-toggle="modal" data-target="#loginModal">Login</a>
-        </li>
-        <li><a href="/register">Sign up</a>
-        </li>
+        <li class="visible-xs"><a href="/" data-toggle="modal" data-target="#loginModal">Login</a></li>
+        <li><a href="/register">Sign up</a></li>
+      {% else %}
+        <li><a href="/logout">Logout</a></li>
+      {% endif %}
       </ul>
     </div><!-- /.nav-collapse -->
   </div><!-- /.container -->
 </div><!-- /.navbar -->
-
 {% include 'includes/loginmodal.twig' %}

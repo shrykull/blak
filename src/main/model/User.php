@@ -35,7 +35,7 @@
         return $this->id;
     }
     
-    public function getEnabled() {
+    public function isEnabled() {
         return $this->enabled;
     }
 
@@ -110,4 +110,5 @@
     public function setSession_key($session_key) {
         $this->session_key = $session_key;
     }
+    
   }

@@ -1,5 +1,5 @@
 <!-- Modal -->
-<link rel="stylesheet" href="{{ app.request.basepath }}/css/loginmodal.css" type="text/css" />
+<link rel="stylesheet" href="/css/loginmodal.css" type="text/css" />
 <script type="text/javascript" src="js/loginModal.js"></script>
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -8,10 +8,10 @@
         <div class="form-wrapper">
           <div class="signin-form">
             <h2><i class="glyphicon glyphicon-user"></i>Login</h2>
-            <form>
-              <input type="text" class="form-control" name="username" placeholder="Username/E-Mail Address" />
-              <input type="password" class="form-control" name="password" placeholder="Password" />
-              <input type="checkbox" value="remember" name="remember" id="remember" />
+            <form method="post" action="/login" id="signIn">
+              <input type="text" class="form-control" name="username" id="username" placeholder="Username/E-Mail Address" />
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+              <input type="checkbox" value="1" name="remember" id="remember" />
               <label for="remember" class="remember">Remember me</label>
               <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
               <p class="help-block">

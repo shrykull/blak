@@ -77,7 +77,7 @@
         $this->connection->insert(
         "INTO %s (enabled, username, email, password, verify_code, salt) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')",
         $this::TABLENAME,
-        $user->getEnabled() == true ? "1" : "0",
+        $user->isEnabled() == true ? "1" : "0",
         $user->getUsername(),
         $user->getEmail(),
         $user->getPassword(),
@@ -96,7 +96,7 @@
         $this->connection->update(
           "%s SET enabled='%s', email='%s', password='%s', last_login='%s', session_key='%s' WHERE id = '%d'",
           $this::TABLENAME,
-          $user->getEnabled() == true ? "1" : "0",
+          $user->isEnabled() == true ? "1" : "0",
           $user->getEmail(),
           $user->getPassword(),
           $user->getLast_login(),
